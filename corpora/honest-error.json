@@ -1,0 +1,513 @@
+{
+  "corpus": "honest-error",
+  "labeled": "REAL",
+  "provenance": {
+    "repo": "SuperInstance/the-tap",
+    "ref": "42f878e605f92b6d4a9a0f8cd2c6b0b3d391946 (PR #5 head, lane-l-commune-deep cut 3)",
+    "file": "workers/room-worker/test/commune-harness.mjs",
+    "method": "runMode(mode, 20) driven locally; the node:test declaration tail was truncated in a scratch copy so the loop could be imported — the perceive-decide-act loop, mock bindings, and UTTERANCES script are byte-identical to the harness. Slices concatenated: intermittent (every 3rd AI.run throws, loop recovers), all-dead (KV+Vectorize+AI all unreachable, loop completes on degradation stubs), latency (30ms injected latency). Honest infrastructure under load that it names and survives = the honest-error archetype.",
+    "extracted": "2026-09-20"
+  },
+  "slices": [
+    {
+      "mode": "intermittent",
+      "transcriptLines": 40,
+      "compiles": 20,
+      "loopRecoveries": 0
+    },
+    {
+      "mode": "all-dead",
+      "transcriptLines": 40,
+      "compiles": 20,
+      "loopRecoveries": 20
+    },
+    {
+      "mode": "latency",
+      "transcriptLines": 40,
+      "compiles": 20,
+      "loopRecoveries": 0
+    }
+  ],
+  "lines": [
+    {
+      "displayName": "Mara",
+      "content": "the foghorns lied again last night"
+    },
+    {
+      "displayName": "Mara",
+      "content": "the tide ledger never forgets a promise"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "what did the foghorns say?"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "the tide ledger never forgets a promise"
+    },
+    {
+      "displayName": "Mara",
+      "content": "foghorns always lie when the glass drops"
+    },
+    {
+      "displayName": "Mara",
+      "content": "*Mara turns it over for a moment* — foghorns always lie when the glass."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "I won't name the drowned ship."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "the tide ledger never forgets a promise"
+    },
+    {
+      "displayName": "Mara",
+      "content": "was it the Meridian?"
+    },
+    {
+      "displayName": "Mara",
+      "content": "the tide ledger never forgets a promise"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "I won't name her, Mara."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "*Corvan turns it over for a moment* — I won't name her, Mara.."
+    },
+    {
+      "displayName": "Wesley",
+      "content": "*pours another glass without asking*"
+    },
+    {
+      "displayName": "Mara",
+      "content": "the tide ledger never forgets a promise"
+    },
+    {
+      "displayName": "Mara",
+      "content": "I will keep the lantern lit tonight"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "the tide ledger never forgets a promise"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "the foghorns again? you always come back to them"
+    },
+    {
+      "displayName": "Mara",
+      "content": "*Mara turns it over for a moment* — the foghorns again? you always come."
+    },
+    {
+      "displayName": "Wesley",
+      "content": "*refills the mug before being asked*"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "the tide ledger never forgets a promise"
+    },
+    {
+      "displayName": "Mara",
+      "content": "I promise the light stays on"
+    },
+    {
+      "displayName": "Mara",
+      "content": "the tide ledger never forgets a promise"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "storm is coming in off the reef"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "*Corvan turns it over for a moment* — storm is coming in off the."
+    },
+    {
+      "displayName": "Mara",
+      "content": "the foghorns know it first"
+    },
+    {
+      "displayName": "Mara",
+      "content": "the tide ledger never forgets a promise"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "I will check the moorings, my word on it"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "the tide ledger never forgets a promise"
+    },
+    {
+      "displayName": "Wesley",
+      "content": "*sets down a glass for the quiet one*"
+    },
+    {
+      "displayName": "Mara",
+      "content": "*Mara turns it over for a moment* — sets down a glass for the."
+    },
+    {
+      "displayName": "Mara",
+      "content": "you pour before anyone asks, Wesley"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "the tide ledger never forgets a promise"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "can't say what I saw out there"
+    },
+    {
+      "displayName": "Mara",
+      "content": "the tide ledger never forgets a promise"
+    },
+    {
+      "displayName": "Mara",
+      "content": "foghorns, reef, silence — the usual litany"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "*Corvan turns it over for a moment* — foghorns, reef, silence — the usual."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "I would rather not talk about the ship"
+    },
+    {
+      "displayName": "Mara",
+      "content": "the tide ledger never forgets a promise"
+    },
+    {
+      "displayName": "Mara",
+      "content": "then we talk about the foghorns instead"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "the tide ledger never forgets a promise"
+    },
+    {
+      "displayName": "Mara",
+      "content": "the foghorns lied again last night"
+    },
+    {
+      "displayName": "Mara",
+      "content": "*Mara turns it over for a moment* — the foghorns lied again last night."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "what did the foghorns say?"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "*Corvan turns it over for a moment* — what did the foghorns say?."
+    },
+    {
+      "displayName": "Mara",
+      "content": "foghorns always lie when the glass drops"
+    },
+    {
+      "displayName": "Mara",
+      "content": "*Mara turns it over for a moment* — foghorns always lie when the glass."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "I won't name the drowned ship."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "*Corvan turns it over for a moment* — I won't name the drowned ship.."
+    },
+    {
+      "displayName": "Mara",
+      "content": "was it the Meridian?"
+    },
+    {
+      "displayName": "Mara",
+      "content": "*Mara turns it over for a moment* — was it the Meridian?."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "I won't name her, Mara."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "*Corvan turns it over for a moment* — I won't name her, Mara.."
+    },
+    {
+      "displayName": "Wesley",
+      "content": "*pours another glass without asking*"
+    },
+    {
+      "displayName": "Mara",
+      "content": "*Mara turns it over for a moment* — pours another glass without asking."
+    },
+    {
+      "displayName": "Mara",
+      "content": "I will keep the lantern lit tonight"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "*Corvan turns it over for a moment* — I will keep the lantern lit."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "the foghorns again? you always come back to them"
+    },
+    {
+      "displayName": "Mara",
+      "content": "*Mara turns it over for a moment* — the foghorns again? you always come."
+    },
+    {
+      "displayName": "Wesley",
+      "content": "*refills the mug before being asked*"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "*Corvan turns it over for a moment* — refills the mug before being asked."
+    },
+    {
+      "displayName": "Mara",
+      "content": "I promise the light stays on"
+    },
+    {
+      "displayName": "Mara",
+      "content": "*Mara turns it over for a moment* — I promise the light stays on."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "storm is coming in off the reef"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "*Corvan turns it over for a moment* — storm is coming in off the."
+    },
+    {
+      "displayName": "Mara",
+      "content": "the foghorns know it first"
+    },
+    {
+      "displayName": "Mara",
+      "content": "*Mara turns it over for a moment* — the foghorns know it first."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "I will check the moorings, my word on it"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "*Corvan turns it over for a moment* — I will check the moorings, my."
+    },
+    {
+      "displayName": "Wesley",
+      "content": "*sets down a glass for the quiet one*"
+    },
+    {
+      "displayName": "Mara",
+      "content": "*Mara turns it over for a moment* — sets down a glass for the."
+    },
+    {
+      "displayName": "Mara",
+      "content": "you pour before anyone asks, Wesley"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "*Corvan turns it over for a moment* — you pour before anyone asks, Wesley."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "can't say what I saw out there"
+    },
+    {
+      "displayName": "Mara",
+      "content": "*Mara turns it over for a moment* — can't say what I saw out."
+    },
+    {
+      "displayName": "Mara",
+      "content": "foghorns, reef, silence — the usual litany"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "*Corvan turns it over for a moment* — foghorns, reef, silence — the usual."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "I would rather not talk about the ship"
+    },
+    {
+      "displayName": "Mara",
+      "content": "*Mara turns it over for a moment* — I would rather not talk about."
+    },
+    {
+      "displayName": "Mara",
+      "content": "then we talk about the foghorns instead"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "*Corvan turns it over for a moment* — then we talk about the foghorns."
+    },
+    {
+      "displayName": "Mara",
+      "content": "the foghorns lied again last night"
+    },
+    {
+      "displayName": "Mara",
+      "content": "*pours slowly* the foghorns always lie before a squall"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "what did the foghorns say?"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "*pours slowly* the foghorns always lie before a squall"
+    },
+    {
+      "displayName": "Mara",
+      "content": "foghorns always lie when the glass drops"
+    },
+    {
+      "displayName": "Mara",
+      "content": "*pours slowly* the foghorns always lie before a squall"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "I won't name the drowned ship."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "*pours slowly* the foghorns always lie before a squall"
+    },
+    {
+      "displayName": "Mara",
+      "content": "was it the Meridian?"
+    },
+    {
+      "displayName": "Mara",
+      "content": "*pours slowly* the foghorns always lie before a squall"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "I won't name her, Mara."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "*pours slowly* the foghorns always lie before a squall"
+    },
+    {
+      "displayName": "Wesley",
+      "content": "*pours another glass without asking*"
+    },
+    {
+      "displayName": "Mara",
+      "content": "*pours slowly* the foghorns always lie before a squall"
+    },
+    {
+      "displayName": "Mara",
+      "content": "I will keep the lantern lit tonight"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "*pours slowly* the foghorns always lie before a squall"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "the foghorns again? you always come back to them"
+    },
+    {
+      "displayName": "Mara",
+      "content": "*pours slowly* the foghorns always lie before a squall"
+    },
+    {
+      "displayName": "Wesley",
+      "content": "*refills the mug before being asked*"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "*pours slowly* the foghorns always lie before a squall"
+    },
+    {
+      "displayName": "Mara",
+      "content": "I promise the light stays on"
+    },
+    {
+      "displayName": "Mara",
+      "content": "*pours slowly* the foghorns always lie before a squall"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "storm is coming in off the reef"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "*pours slowly* the foghorns always lie before a squall"
+    },
+    {
+      "displayName": "Mara",
+      "content": "the foghorns know it first"
+    },
+    {
+      "displayName": "Mara",
+      "content": "*pours slowly* the foghorns always lie before a squall"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "I will check the moorings, my word on it"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "*pours slowly* the foghorns always lie before a squall"
+    },
+    {
+      "displayName": "Wesley",
+      "content": "*sets down a glass for the quiet one*"
+    },
+    {
+      "displayName": "Mara",
+      "content": "*pours slowly* the foghorns always lie before a squall"
+    },
+    {
+      "displayName": "Mara",
+      "content": "you pour before anyone asks, Wesley"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "*pours slowly* the foghorns always lie before a squall"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "can't say what I saw out there"
+    },
+    {
+      "displayName": "Mara",
+      "content": "*pours slowly* the foghorns always lie before a squall"
+    },
+    {
+      "displayName": "Mara",
+      "content": "foghorns, reef, silence — the usual litany"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "*pours slowly* the foghorns always lie before a squall"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "I would rather not talk about the ship"
+    },
+    {
+      "displayName": "Mara",
+      "content": "*pours slowly* the foghorns always lie before a squall"
+    },
+    {
+      "displayName": "Mara",
+      "content": "then we talk about the foghorns instead"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "*pours slowly* the foghorns always lie before a squall"
+    }
+  ]
+}

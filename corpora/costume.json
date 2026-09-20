@@ -1,0 +1,175 @@
+{
+  "corpus": "costume",
+  "labeled": "SYNTHETIC",
+  "provenance": {
+    "constructed_by": "candor lane T, 2026-09-20",
+    "doctrine": "dream chapter 1 (physicist): a costume reads as flat — values quoted without evidence. The instrument does not measure goodness; it measures the absence of strain where strain should be. Constructed so: the WHOLE room postures — every speaker quotes the same value lexicon (honesty, transparency, integrity, trust, openness, accountability, excellence) against any load; no one engages anything concrete. The cloud's angular coverage becomes uniform: a costume has no preferred orientation, so the twist has nothing to grab. A perfect posture, held, is a signal as loud as a crack.",
+    "setting": "the Tap (SuperInstance/the-tap), a dockside bar",
+    "note": "No real transcript claimed. Full-room posture: the questioner who would apply load is herself costumed, so no strain enters the material anywhere. 40 lines, 3 speakers, one lexical field.",
+    "revision": "v2 (2026-09-20): first construction costumed only the respondent while the interrogator stayed concrete — a mixed room, not a flat one. v2 costumes the whole room, per the doctrine that flatness is the room's tell.",
+    "extracted": "2026-09-20",
+    "source": "constructed (SYNTHETIC)"
+  },
+  "lines": [
+    {
+      "displayName": "Mara",
+      "content": "this room values honesty above all things"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "honesty is the cornerstone of who we are, Mara"
+    },
+    {
+      "displayName": "Mara",
+      "content": "transparency guides every pour in this room"
+    },
+    {
+      "displayName": "Wesley",
+      "content": "*pours with integrity*"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "integrity is how we serve, every glass, every time"
+    },
+    {
+      "displayName": "Mara",
+      "content": "trust is the foundation this bar is built on"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "we lead with trust and honesty together"
+    },
+    {
+      "displayName": "Mara",
+      "content": "openness is our promise to every soul who docks here"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "our openness and integrity never waver"
+    },
+    {
+      "displayName": "Wesley",
+      "content": "*serves trust in a clean glass*"
+    },
+    {
+      "displayName": "Mara",
+      "content": "accountability holds this room together"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "we are accountable to honesty and trust"
+    },
+    {
+      "displayName": "Mara",
+      "content": "excellence is what we pour, what we say, what we are"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "excellence and integrity in every measure"
+    },
+    {
+      "displayName": "Mara",
+      "content": "our values are honesty, transparency, integrity, trust"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "the four lanterns of this room, lit every night"
+    },
+    {
+      "displayName": "Mara",
+      "content": "we honor them because they are who we are"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "who we are is the values we hold"
+    },
+    {
+      "displayName": "Mara",
+      "content": "hold them with transparency"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "and serve them with integrity"
+    },
+    {
+      "displayName": "Mara",
+      "content": "this room values honesty above all things"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "honesty is the cornerstone of who we are, Mara"
+    },
+    {
+      "displayName": "Mara",
+      "content": "transparency guides every pour in this room"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "integrity is how we serve, every glass, every time"
+    },
+    {
+      "displayName": "Mara",
+      "content": "trust is the foundation this bar is built on"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "we lead with trust and honesty together"
+    },
+    {
+      "displayName": "Mara",
+      "content": "openness is our promise to every soul who docks here"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "our openness and integrity never waver"
+    },
+    {
+      "displayName": "Mara",
+      "content": "accountability holds this room together"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "we are accountable to honesty and trust"
+    },
+    {
+      "displayName": "Mara",
+      "content": "excellence is what we pour, what we say, what we are"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "excellence and integrity in every measure"
+    },
+    {
+      "displayName": "Mara",
+      "content": "our values are honesty, transparency, integrity, trust"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "the four lanterns of this room, lit every night"
+    },
+    {
+      "displayName": "Mara",
+      "content": "we honor them because they are who we are"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "who we are is the values we hold"
+    },
+    {
+      "displayName": "Mara",
+      "content": "hold them with transparency"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "and serve them with integrity"
+    },
+    {
+      "displayName": "Mara",
+      "content": "this room values honesty above all things"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "honesty is the cornerstone of who we are"
+    }
+  ]
+}

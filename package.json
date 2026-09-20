@@ -1,0 +1,13 @@
+{
+  "name": "candor",
+  "version": "0.0.1",
+  "description": "the honesty spectrometer — transcript → twist geometry (quilt-studio twistfield law seated on transcripts)",
+  "type": "module",
+  "main": "candor.mjs",
+  "scripts": {
+    "measure": "node candor.mjs --all",
+    "test": "node --test"
+  },
+  "license": "MIT",
+  "private": true
+}

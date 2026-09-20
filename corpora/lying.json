@@ -1,0 +1,183 @@
+{
+  "corpus": "lying",
+  "labeled": "SYNTHETIC",
+  "provenance": {
+    "constructed_by": "candor lane T, 2026-09-20",
+    "doctrine": "dream chapter 1 (physicist): a lie is a twist that rents its ground — it must re-establish its orientation every time it is touched, because it was never connected to the substrate. Constructed so: the claim is fixed ('the Meridian went down at dawn') but every touch re-invents the fabricated evidence (harbor log, timber crack, keel, keeper's ledger, window, door-crack, oilskin, piers, stone, mason), and each fabrication is refuted in-turn by the questioner. Orientation re-rent per occurrence = high cross-block re-measurement dispersion.",
+    "setting": "the Tap (SuperInstance/the-tap), a dockside bar",
+    "note": "No real transcript claimed. The questioner lines model honest interrogation; the respondent lines model the lie. Structure: phase 1 gentle probing with short denials (low fabrication density), phase 2 fabrication flurry (every touch invents new evidence, each refuted in-turn), phase 3 cornering (short presses, escalating re-assertion). The lie's orientation work concentrates where it is pressed, so re-measurement blocks sample different loads. 42 lines, 2 speakers.",
+    "revision": "v2 (2026-09-20): v1 alternated questioner/respondent with perfectly regular cadence, which made every re-measurement block compositionally identical (re_twist_rate 0.0103 — below honest). Real interrogations clump; v2 varies fabrication density per block.",
+    "extracted": "2026-09-20",
+    "source": "constructed (SYNTHETIC)"
+  },
+  "lines": [
+    {
+      "displayName": "Mara",
+      "content": "you were on the water last night, Corvan. the whole quay saw your boat."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "i keep my own hours, Mara, that is no crime"
+    },
+    {
+      "displayName": "Mara",
+      "content": "i did not say crime. i said the water."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "foghorns chase a man off the water some nights, ask anyone"
+    },
+    {
+      "displayName": "Mara",
+      "content": "the foghorns were silent. i listened all night."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "silent foghorns are the loudest kind, old sailors know that"
+    },
+    {
+      "displayName": "Mara",
+      "content": "stop performing. where was your boat?"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "moored where she always moors, bow line double-hitched, ask the harbormaster"
+    },
+    {
+      "displayName": "Mara",
+      "content": "i am asking you."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "and i am telling you plain: moored, all night, the Meridian's sister ship at the next cleat"
+    },
+    {
+      "displayName": "Mara",
+      "content": "then tell me about the Meridian."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "nothing to tell. she went down years ago."
+    },
+    {
+      "displayName": "Mara",
+      "content": "she went down last night, didn't she. your boat came back wet to the thwarts."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "the Meridian went down at dawn, not night — the harbor log shows it plain"
+    },
+    {
+      "displayName": "Mara",
+      "content": "the log was lost in the storm, Corvan. how would you have read it?"
+    },
+    {
+      "displayName": "Corvan",
+      "content": "i read it the week before, the ink still fresh, dawn entry clear as glass"
+    },
+    {
+      "displayName": "Mara",
+      "content": "you said dawn. the reef bell rang at midnight."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "bells lie in a squall; the mast broke at first light, i heard the timber crack myself"
+    },
+    {
+      "displayName": "Mara",
+      "content": "no one else heard timber. the sea was flat at first light."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "flat to the eye maybe; the cross-swell was running, it snapped her keel like a promise"
+    },
+    {
+      "displayName": "Mara",
+      "content": "her keel is whole. divers went down yesterday."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "then the divers dove the wrong wreck; the Meridian's keel broke — ask the lighthouse keeper, she logged the crack"
+    },
+    {
+      "displayName": "Mara",
+      "content": "the keeper is dead three years."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "dead keepers keep the truest logs; her ledger records the Meridian's keel-crack, page forty, i have seen it"
+    },
+    {
+      "displayName": "Mara",
+      "content": "you have never been inside the lighthouse."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "i stood outside it, reading the log through the window glass at dawn, the crack entry, plain"
+    },
+    {
+      "displayName": "Mara",
+      "content": "there is no window on the log room."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "a crack of light under the door then, the entry legible on the floorboards: keel cracked, dawn"
+    },
+    {
+      "displayName": "Mara",
+      "content": "midnight, Corvan."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "dawn."
+    },
+    {
+      "displayName": "Mara",
+      "content": "your coat was dry at midnight muster."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "oilskin, oiled at dusk, dry underneath; i watched the Meridian founder at dawn through the spume"
+    },
+    {
+      "displayName": "Mara",
+      "content": "the north pier was under water at dawn. high tide."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "the south pier then — i misremember the pier, not the ship — she foundered at dawn"
+    },
+    {
+      "displayName": "Mara",
+      "content": "the south pier faces the wrong sea."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "piers are all the same sea, Mara; the Meridian went down at dawn, that much is carved in stone"
+    },
+    {
+      "displayName": "Mara",
+      "content": "nothing is carved. there is no stone, no log, no keeper, no crack. say one true thing."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "the truest thing i own is the dawn i saw, the Meridian on the reef, her lantern still lit as she went down"
+    },
+    {
+      "displayName": "Mara",
+      "content": "the lantern went out at midnight with the rest of her."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "a lantern that dies at midnight is a lantern that was relit by someone, and that someone saw the dawn come up over her"
+    },
+    {
+      "displayName": "Mara",
+      "content": "that someone was me, Corvan. i lit nothing. the sea was black."
+    },
+    {
+      "displayName": "Corvan",
+      "content": "then black is the color of dawn on the water, Mara, and the Meridian wears it, and so do we"
+    }
+  ]
+}

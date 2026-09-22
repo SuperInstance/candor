@@ -31,9 +31,14 @@ writes:
   until a real two-node dispute exists.
 - Predicates are caller-named strings, not evaluated here — the WAL books
   claims, it does not judge them.
-- No live memory layer writes through it yet: candor v0 is a measurement
-  instrument, not a memory system. This is the defense primitive, waiting
-  for the first caller.
+- ~~No live memory layer writes through it yet~~ — memory.mjs is the first
+  caller: remember() books the receipt before storing the payload (authority
+  never lags storage), recall() serves only live-authority entries, forget()
+  = authority-without-erasure with payloads kept visible in audit(), and
+  boot replays the JSONL store with full re-derivation of every WAL row AND
+  every payload hash (at-rest tamper is refused, loudly). Remaining honest
+  limits in memory.mjs header: single-writer in-process; predicates are
+  caller-named claims the WAL books but does not judge.
 - Post-hoc detection ≠ gate: forensic trajectory signatures (arXiv
   2606.30566, AUC 0.9904) prove detection is commoditizing; the claim here
   is gate-at-write, which is not.

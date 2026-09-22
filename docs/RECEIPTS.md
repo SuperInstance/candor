@@ -29,8 +29,16 @@ writes:
 - In-process only: no cross-node non-repudiation. That is the receipts-v2
   Ed25519/BLAKE3 signature envelope (jev-quilt docs/receipts-v2), deferred
   until a real two-node dispute exists.
-- Predicates are caller-named strings, not evaluated here — the WAL books
-  claims, it does not judge them.
+- ~~Predicates are caller-named strings, not evaluated here~~ — CLOSED by
+  `predicates.mjs` + `MemoryLayer.rememberJudged()`: deterministic,
+  immutable predicates (re-registering a name with a different body
+  throws) judge payloads at write time. A pass books `PREDICATE-PASS`
+  under a `name#hash` predicate field (identity hash-committed); a refusal
+  books a `PREDICATE-REFUSAL` row, stores nothing, and the refused
+  payload's hash stays in the chain as evidence (a gate that leaves no
+  evidence when it fires can be probed for free). Boot replay RE-JUDGES
+  stored payloads: a verdict that does not reproduce, or a predicate
+  identity that does not match, refuses boot loudly.
 - ~~No live memory layer writes through it yet~~ — memory.mjs is the first
   caller: remember() books the receipt before storing the payload (authority
   never lags storage), recall() serves only live-authority entries, forget()

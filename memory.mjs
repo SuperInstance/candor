@@ -12,19 +12,32 @@
 // waking is replay-verify, not snapshot trust). A tampered store is refused
 // at boot, loudly, with the row that broke.
 //
+// Judged writes (rememberJudged): a deterministic, immutable predicate
+// (predicates.mjs) evaluates the payload at write time — gate-at-write,
+// not post-hoc detection. The row's predicate field is `name#hash`, so
+// the judgment's identity is hash-committed; a refusal books a visible
+// PREDICATE-REFUSAL row and stores nothing, but the attempt stays in the
+// chain as evidence.
+//
 // Honest limits: single-writer in-process (no cross-node non-repudiation —
-// receipts-v2 envelope, deferred); predicates are caller-named strings, the
-// WAL books claims it does not judge; recall() answers "what is live
+// receipts-v2 envelope, deferred); predicates judge payloads at write time
+// but the rules themselves are registered in-process (rule provenance is
+// the registry owner's problem); recall() answers "what is live
 // authority" — truth of payloads is the memory layer's own problem.
 
 import { readFileSync, appendFileSync, existsSync } from 'node:fs';
 import { CandorWAL, fnv1a64 } from './wal.mjs';
+import { judge } from './predicates.mjs';
 
 export class MemoryLayer {
-  constructor({ wal, authority = 'memory', file } = {}) {
+  constructor({ wal, authority = 'memory', file, predicates } = {}) {
     this.wal = wal ?? new CandorWAL({ authority });
     this.authority = authority;
     this.file = file;
+    // Predicate registry for judged writes: needed at boot to RE-JUDGE
+    // stored payloads during replay-verify. A store holding judged
+    // entries refuses to boot without it (verdicts must reproduce).
+    this.predicates = predicates;
     // namespace -> [{ predicate, payload, receipt_seq }]
     this.store = new Map();
     if (file && existsSync(file)) this.#load(file);
@@ -76,6 +89,29 @@ export class MemoryLayer {
         throw new Error('memory store refused: payload at receipt ' +
           p.entry.receipt_seq + ' fails re-derivation — at-rest tamper');
       }
+      // Judged entries: the verdict must reproduce at boot. Predicates
+      // are deterministic and immutable (predicates.mjs), so a stored
+      // pass that no longer passes means the rule was swapped or the
+      // store was tampered — refuse loudly either way.
+      if (p.entry.predicate_id) {
+        if (!this.predicates) {
+          throw new Error('memory store refused: entry at receipt ' +
+            p.entry.receipt_seq + ' was predicate-judged but no ' +
+            'registry was supplied — verdicts cannot be replay-verified');
+        }
+        const predicate = this.predicates.get(p.entry.predicate_id.name);
+        if (predicate.hash !== p.entry.predicate_id.hash) {
+          throw new Error('memory store refused: predicate ' +
+            `'${p.entry.predicate_id.name}' at receipt ${p.entry.receipt_seq} ` +
+            'has hash ' + predicate.hash + ', store booked ' +
+            p.entry.predicate_id.hash + ' — judgment identity mismatch');
+        }
+        const verdict = judge(predicate, p.entry.payload);
+        if (!verdict.pass) {
+          throw new Error('memory store refused: judgment at receipt ' +
+            p.entry.receipt_seq + ' does not reproduce — ' + verdict.detail);
+        }
+      }
       this.#entries(p.namespace).push(p.entry);
     }
   }
@@ -100,6 +136,41 @@ export class MemoryLayer {
     this.#persist({ kind: 'row', row });
     this.#persist({ kind: 'payload', namespace, entry });
     return row;
+  }
+
+  // Gate-at-write: the predicate judges the payload BEFORE anything is
+  // stored. A pass books a PREDICATE-PASS receipt and stores the payload.
+  // A refusal books a PREDICATE-REFUSAL receipt and stores NOTHING — but
+  // the attempt stays in the chain (hash-committed payload_hash + the
+  // predicate's hash-committed identity), visible to audit(). A gate that
+  // leaves no evidence when it fires is a gate the attacker can probe
+  // for free; this one books every probe.
+  // Returns { row, verdict, stored }.
+  rememberJudged(namespace, predicate, payload, note) {
+    const verdict = judge(predicate, payload);
+    // The row's predicate field is `name#hash` — the judgment's identity
+    // is hash-committed in the chain, so a swapped rule breaks verify().
+    // note carries the verdict tag; a refusal's reason goes in the tag
+    // too (reason-laundering breaks verify, same as REVOKE detail).
+    const row = this.wal.write(namespace,
+      `${predicate.name}#${predicate.hash}`, payload,
+      verdict.pass
+        ? 'PREDICATE-PASS'
+        : `PREDICATE-REFUSAL: ${verdict.detail}`);
+    // The row is persisted on BOTH paths: a refusal row is part of the
+    // chain — not persisting it would amputate the chain at reload (the
+    // next row's prev_hash would point at a row the store never recorded).
+    // Same lesson as forget().
+    this.#persist({ kind: 'row', row });
+    if (!verdict.pass) return { row, verdict, stored: false };
+    const entry = { payload, receipt_seq: row.seq,
+      predicate: row.predicate, // recall-facing: the hash-committed identity
+      payload_hash: fnv1a64(new TextEncoder().encode(String(payload)))
+        .toString(16).padStart(16, '0'),
+      predicate_id: { name: predicate.name, hash: predicate.hash } };
+    this.#entries(namespace).push(entry);
+    this.#persist({ kind: 'payload', namespace, entry });
+    return { row, verdict, stored: true };
   }
 
   // Authority-without-erasure: the payloads stay; their authority is void.
